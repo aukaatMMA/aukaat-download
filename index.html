@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="./assets/icon/img.png">
+    <title>Aukaat App | Riot Login</title>
+
+    <link rel="stylesheet" href="./styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"/>
+</head>
+<body>
+<div class="blur-overlay"></div>
+
+<div class="container">
+    <header class="header">
+        <h1>Secure Login with Riot Games</h1>
+        <p class="subtitle">Authenticate to unlock your exclusive Aukaat App download</p>
+    </header>
+
+    <section class="info">
+        <p>
+            By logging in with your Riot Games account, you verify your in-game identity. <br/>
+            After completion, you will be redirected to download <strong>Aukaat App</strong>.
+        </p>
+
+    </section>
+
+    <button class="button" onclick="loginWithRiot()">Login with Riot Games</button>
+
+    <footer class="footer">
+        <small>This service uses Riot's official OAuth and does not store your password.</small>
+    </footer>
+</div>
+
+<script>
+    function loginWithRiot() {
+        const clientId = 'YOUR_CLIENT_ID'; // Replace with your actual Riot client ID
+        const redirectUri = window.location.origin + '/download';
+        const authUrl = `https://auth.riotgames.com/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=code&scope=openid`;
+        window.location.href = authUrl;
+    }
+</script>
+</body>
+</html>
