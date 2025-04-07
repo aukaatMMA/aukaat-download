@@ -3,43 +3,37 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Download | Aukaat</title>
     <link rel="icon" href="./assets/icon/img.png">
-    <title>Aukaat App | Download</title>
-
-    <link rel="stylesheet" href="./styles.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+
 <div class="blur-overlay"></div>
+<nav class="navbar">
+    <a href="/index">Home</a>
+    <a href="/download">Download</a>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+</nav>
 
-<div class="container">
-    <header class="header">
-        <h1>Download Aukaat App</h1>
-        <p class="subtitle">Thank you for verifying your Riot ID</p>
-    </header>
-
-    <section class="info">
-        <a class="button">Download App</a>
+<div class="main-content">
+    <section class="section" id="download">
+        <h2>Download</h2>
+        <p>App will be soon available for download</p>
+<!--        <p>The app is ready for private beta testing! <br/> Download the latest version below</p>-->
+<!--        <a class="download-btn" href="#" download>Download Aukaat App (ZIP)</a>-->
     </section>
-
-
-    <footer class="footer">
-        <small>Your Riot identity has been confirmed securely via OAuth.</small>
-    </footer>
+    <section class="section">
+        <p>Thanks to everyone who’s played in the early tournaments, shared feedback, or just hyped us up.</p>
+        <p>And shoutout to the small team helping turn this into something real.</p>
+    </section>
 </div>
+<footer>
+    <p>Made with ❤️ by gamers, for gamers. Aukaat 2025.</p>
+    <p>Early testers, friends, and hype crew — we see you. 🙌</p>
+</footer>
 
-<script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get('token');
-
-    if (!token) {
-        // No token in query params, redirect to login
-        window.location.href = '/';
-    } else {
-        // Token exists, show the download link
-        // document.querySelector(".button").setAttribute("href", "assets/aukaat-app.zip");
-        // document.querySelector(".button").setAttribute("download", "aukaat-app.zip");
-    }
-</script>
 </body>
 </html>

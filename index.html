@@ -1,45 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="./assets/icon/img.png">
-    <title>Aukaat App | Riot Login</title>
-
-    <link rel="stylesheet" href="./styles.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aukaat | 1v1 Tournament App</title>
+    <link rel="icon" href="./assets/icon/img.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/a2e0e6d5f0.js" crossorigin="anonymous"></script>
+    <link href="./styles.css" rel="stylesheet" />
 </head>
 <body>
+
 <div class="blur-overlay"></div>
 
-<div class="container">
-    <header class="header">
-        <h1>Secure Login with Riot Games</h1>
-        <p class="subtitle">Authenticate to unlock your exclusive Aukaat App download</p>
-    </header>
+<nav class="navbar">
+    <a href="./index">Home</a>
+    <a href="./download">Download</a>
+    <a href="./about">About Us</a>
+    <a href="./contact">Contact</a>
+</nav>
 
-    <section class="info">
-        <p>
-            By logging in with your Riot Games account, you verify your in-game identity. <br/>
-            After completion, you will be redirected to download <strong>Aukaat App</strong>.
-        </p>
-
+<div class="main-content">
+    <section class="section hero" id="home">
+        <h1>🏆 Aukaat 1v1 Tournament App</h1>
+        <p>An experimental side project turned into a growing platform for 1v1 ARAM tournaments — built with love,
+            gaming
+            spirit, and a healthy dose of post-game brainstorming.</p>
+        <a href="./download" class="download-btn">Get the App</a>
     </section>
 
-    <button class="button" onclick="loginWithRiot()">Login with Riot Games</button>
-
-    <footer class="footer">
-        <small>This service uses Riot's official OAuth and does not store your password.</small>
-    </footer>
 </div>
+<footer>
+    <p>Made with ❤️ by gamers, for gamers. Aukaat 2025.</p>
+    <p>Early testers, friends, and hype crew — we see you. 🙌</p>
+</footer>
 
-<script>
-    function loginWithRiot() {
-        const clientId = 'YOUR_CLIENT_ID'; // Replace with your actual Riot client ID
-        const redirectUri = window.location.origin + '/download';
-        const authUrl = `https://auth.riotgames.com/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&response_type=code&scope=openid`;
-        window.location.href = authUrl;
-    }
-</script>
 </body>
 </html>
