@@ -18,13 +18,16 @@ jobs:
   sign-and-release:
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
     - name: upload-unsigned-artifact
       id: upload-unsigned-artifact
       uses: actions/upload-artifact@v4
       with:
         path: 'assets/exe/Aukaat_0.1.0_x64-setup.exe'
 
-    - id: optional_step_id
+    - id: signing-the-exe
       uses: signpath/github-action-submit-signing-request@v1.1
       with:
         organization-id: ${{ secrets.SIGNPATH_ORG_ID }}
