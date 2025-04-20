@@ -33,6 +33,13 @@ jobs:
             echo "FILE_PATH=assets/exe/Aukaat_0.1.0_x64-setup.exe" >> $GITHUB_OUTPUT
           fi
 
+      - name: Upload unsigned artifact
+        id: upload-unsigned-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: unsigned-executable
+          path: ${{ steps.get_version.outputs.FILE_PATH }}
+
       - name: Upload to SignPath
         id: signpath
         uses: SignPath/github-action-submit-signing-request@v1
@@ -43,7 +50,7 @@ jobs:
           signing-policy-slug: 'default'
           file: ${{ steps.get_version.outputs.FILE_PATH }}
           wait-for-completion: true
-          github-artifact-id: '${{ steps.upload-unsigned-artifact.outputs.artifact-id }}'
+          github-artifact-id: ${{ steps.upload-unsigned-artifact.outputs.artifact-id }}  # Fixed artifact ID reference
           output-artifact-directory: './signed-artifacts'
 
       - name: Download signed artifact
