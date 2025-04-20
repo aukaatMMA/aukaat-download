@@ -14,60 +14,23 @@ on:
         description: 'Path to executable file'
         required: true
         default: 'assets/exe/Aukaat_0.1.0_x64-setup.exe'
-
 jobs:
   sign-and-release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: upload-unsigned-artifact
+      id: upload-unsigned-artifact
+      uses: actions/upload-artifact@v4
+      with:
+        path: 'assets/exe/Aukaat_0.1.0_x64-setup.exe'
 
-      - name: Get the version
-        id: get_version
-        run: |
-          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-            echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
-            echo "FILE_PATH=${{ github.event.inputs.file_path }}" >> $GITHUB_OUTPUT
-          else
-            echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
-            echo "FILE_PATH=assets/exe/Aukaat_0.1.0_x64-setup.exe" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Upload unsigned artifact
-        id: upload-unsigned-artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: unsigned-executable
-          path: ${{ steps.get_version.outputs.FILE_PATH }}
-
-      - name: Upload to SignPath
-        id: signpath
-        uses: SignPath/github-action-submit-signing-request@v1
-        with:
-          organization-id: ${{ secrets.SIGNPATH_ORG_ID }}
-          project-slug: ${{ secrets.SIGNPATH_PROJECT_ID }}
-          api-token: ${{ secrets.SIGNPATH_TOKEN }}
-          signing-policy-slug: 'default'
-          file: ${{ steps.get_version.outputs.FILE_PATH }}
-          wait-for-completion: true
-          github-artifact-id: ${{ steps.upload-unsigned-artifact.outputs.artifact-id }}  # Fixed artifact ID reference
-          output-artifact-directory: './signed-artifacts'
-
-      - name: Download signed artifact
-        run: |
-          OUTPUT_FILENAME=$(basename "${{ steps.get_version.outputs.FILE_PATH }}" | sed 's/\.[^.]*$/.signed\0/')
-          curl -L -o "${OUTPUT_FILENAME}" "${{ steps.signpath.outputs.artifact_url }}"
-          echo "SIGNED_FILE=${OUTPUT_FILENAME}" >> $GITHUB_OUTPUT
-        id: download
-
-      - name: Create Release
-        id: create_release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: ${{ steps.download.outputs.SIGNED_FILE }}
-          name: Release ${{ steps.get_version.outputs.VERSION }}
-          tag_name: ${{ steps.get_version.outputs.VERSION }}
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - id: optional_step_id
+      uses: signpath/github-action-submit-signing-request@v1.1
+      with:
+        organization-id: ${{ secrets.SIGNPATH_ORG_ID }}
+        project-slug: ${{ secrets.SIGNPATH_PROJECT_ID }}
+        api-token: ${{ secrets.SIGNPATH_TOKEN }}
+        signing-policy-slug: 'default'
+        github-artifact-id: '${{ steps.upload-unsigned-artifact.outputs.artifact-id }}'
+        wait-for-completion: true
+        output-artifact-directory: './signed-artifacts'
