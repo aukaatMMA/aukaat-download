@@ -1,0 +1,43 @@
+name: Sign Executable and Create Release
+
+on:
+  push:
+    tags:
+      - 'v*' # runs when you push a version tag like v1.0.0
+
+jobs:
+  sign-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Get the version
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Upload to SignPath
+        id: signpath
+        uses: SignPath/github-action@v1
+        with:
+          organization-id: ${{ secrets.SIGNPATH_ORG_ID }}
+          project-slug: ${{ secrets.SIGNPATH_PROJECT_ID }}
+          api-token: ${{ secrets.SIGNPATH_TOKEN }}
+          signing-policy-slug: 'default'
+          file: assets/exe/Aukaat_0.1.0_x64-setup.exe
+          wait-for-completion: true
+
+      - name: Download signed artifact
+        run: |
+          curl -L -o "Aukaat_0.1.0_x64-setup.signed.exe" "${{ steps.signpath.outputs.artifact_url }}"
+
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: Aukaat_0.1.0_x64-setup.signed.exe
+          name: Release ${{ steps.get_version.outputs.VERSION }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
