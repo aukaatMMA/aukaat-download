@@ -1,15 +1,10 @@
 {
-  "version": "1.0.5",
-  "notes": "Bug fixes and performance improvements.",
-  "pub_date": "2025-04-20T14:00:00Z",
+  "version": "0.1.0",
+  "notes": "Release v0.1.0",
   "platforms": {
-    "x86_64-pc-windows-msvc": {
-      "signature": "BASE64_SIGNATURE_HERE",
-      "url": "https://your-server.com/releases/app-v1.0.5-windows.zip"
-    },
-    "x86_64-apple-darwin": {
-      "signature": "BASE64_SIGNATURE_HERE",
-      "url": "https://your-server.com/releases/app-v1.0.5-macos.tar.gz"
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUazdaaXNHNXBXdGQ5WWVTZ3JOSkFqb08xOUx6M3JGNmEwcVRiYUFEU3oyQXFsaU5DZUo3ZytVblFla3QrZlYrbkRxT1E3dzJ6TFdHUE5PbmIzWURlbytJZ3ZnWjdNQWdFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzQ1MTgxMzk3CWZpbGU6QXVrYWF0XzAuMS4wX3g2NF9lbi1VUy5tc2kKajN5MFY3VUNSUnZVT1FZQ0R3OTNEYnh0eFkvNWlwU1QyUVJwUnlsODJOeUVmV3k1cnEwdDZReDdvTFJhMUkvRlFaWEJvU3V0N1R2NWdSekJuWDlUQnc9PQo=",
+      "url": "https://github.com/aukaatMMA/aukaat-app/releases/download/refs/heads/main/Aukaat_0.1.0_x64_en-US.msi"
     }
   }
 }
