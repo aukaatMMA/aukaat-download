@@ -35,7 +35,7 @@ jobs:
 
       - name: Upload to SignPath
         id: signpath
-        uses: SignPath/github-action@v1
+        uses: SignPath/github-action-submit-signing-request@v1
         with:
           organization-id: ${{ secrets.SIGNPATH_ORG_ID }}
           project-slug: ${{ secrets.SIGNPATH_PROJECT_ID }}
