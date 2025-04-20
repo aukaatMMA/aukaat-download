@@ -43,6 +43,8 @@ jobs:
           signing-policy-slug: 'default'
           file: ${{ steps.get_version.outputs.FILE_PATH }}
           wait-for-completion: true
+          github-artifact-id: '${{ steps.upload-unsigned-artifact.outputs.artifact-id }}'
+          output-artifact-directory: './signed-artifacts'
 
       - name: Download signed artifact
         run: |
