@@ -4,6 +4,16 @@ on:
   push:
     tags:
       - 'v*' # runs when you push a version tag like v1.0.0
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version number (e.g., v1.0.0)'
+        required: true
+        default: 'v0.1.0'
+      file_path:
+        description: 'Path to executable file'
+        required: true
+        default: 'assets/exe/Aukaat_0.1.0_x64-setup.exe'
 
 jobs:
   sign-and-release:
@@ -14,7 +24,14 @@ jobs:
 
       - name: Get the version
         id: get_version
-        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            echo "VERSION=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+            echo "FILE_PATH=${{ github.event.inputs.file_path }}" >> $GITHUB_OUTPUT
+          else
+            echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+            echo "FILE_PATH=assets/exe/Aukaat_0.1.0_x64-setup.exe" >> $GITHUB_OUTPUT
+          fi
 
       - name: Upload to SignPath
         id: signpath
@@ -24,19 +41,23 @@ jobs:
           project-slug: ${{ secrets.SIGNPATH_PROJECT_ID }}
           api-token: ${{ secrets.SIGNPATH_TOKEN }}
           signing-policy-slug: 'default'
-          file: assets/exe/Aukaat_0.1.0_x64-setup.exe
+          file: ${{ steps.get_version.outputs.FILE_PATH }}
           wait-for-completion: true
 
       - name: Download signed artifact
         run: |
-          curl -L -o "Aukaat_0.1.0_x64-setup.signed.exe" "${{ steps.signpath.outputs.artifact_url }}"
+          OUTPUT_FILENAME=$(basename "${{ steps.get_version.outputs.FILE_PATH }}" | sed 's/\.[^.]*$/.signed\0/')
+          curl -L -o "${OUTPUT_FILENAME}" "${{ steps.signpath.outputs.artifact_url }}"
+          echo "SIGNED_FILE=${OUTPUT_FILENAME}" >> $GITHUB_OUTPUT
+        id: download
 
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          files: Aukaat_0.1.0_x64-setup.signed.exe
+          files: ${{ steps.download.outputs.SIGNED_FILE }}
           name: Release ${{ steps.get_version.outputs.VERSION }}
+          tag_name: ${{ steps.get_version.outputs.VERSION }}
           draft: false
           prerelease: false
         env:
