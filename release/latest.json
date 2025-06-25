@@ -1,11 +1,11 @@
 {
-  "version": "0.1.2",
-  "notes": "Release v0.1.2: Uses Challonge as backend engine for managing tournaments",
-  "pub_date": "2025-05-01T20:51:00Z",
+  "version": "0.1.9",
+  "notes": "Release v0.1.9: Fixes Discord Integration for Secondary Player",
+  "pub_date": "2025-06-28T14:35:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUazdaaXNHNXBXdGZVZG5tUEJjOGdvUDlVa2NXcjlqWFcrWmloMjVpS1c2akRFU0FIVlQ3RVJwK01TeXVweDdIMTlwTkhJWjZEa2U2ZTFrTzRPS3c2UytVZkFnKzA2UEFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUwODYyODE3CWZpbGU6QXVrYWF0XzAuMS4yX3g2NF9lbi1VUy5tc2kKaVU2akQyMnZSRWVFVWZDaGprS3JwajNNbmZMaTNoTHgrck1PNDRHcXZtTmtYQjFRQUUzSTE5anJReWR3R3g4UFJYZDRJV0hSL09UdzVkM0FDUks3REE9PQo=",
-      "url": "https://github.com/aukaatMMA/aukaat-download/releases/download/v0.1.2/Aukaat_0.1.2_x64_en-US.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUazdaaXNHNXBXdGZZMUlONFNxcXFDZ1JQbW1Db3N2QUppQWR5dEQvN1k5c1J3NDA0UWREaExWV3BXNlZkVFNwSmdWcmJCQ21JTVVxQ0k2S3o4SE9qc29vOTl3UXRXMkFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUxMTA4NDM5CWZpbGU6QXVrYWF0XzAuMS45X3g2NF9lbi1VUy5tc2kKNldwYzNZNDg1UzVMWU1Gc21ERVR1dmMxeFA0TVRuNk9YaXFNUlQyemxWdW0wZjJxYjQrZXBIMmdtZzZ3ajZkbnp2bVA4eVpSWXhMM3kveFlBWTZMRFE9PQo=",
+      "url": "https://github.com/aukaatMMA/aukaat-download/releases/download/v0.1.9/Aukaat_0.1.9_x64_en-US.msi"
     }
   }
 }
