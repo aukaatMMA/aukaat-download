@@ -1,11 +1,11 @@
 {
-  "version": "0.1.2",
-  "notes": "Release v0.1.2: Uses Challonge as backend engine for managing tournaments",
-  "pub_date": "2025-05-01T20:51:00Z",
+  "version": "0.1.3",
+  "notes": "Release v0.1.3: Uses Challonge as backend engine for managing tournaments",
+  "pub_date": "2025-06-25T20:51:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUazdaaXNHNXBXdGZVZG5tUEJjOGdvUDlVa2NXcjlqWFcrWmloMjVpS1c2akRFU0FIVlQ3RVJwK01TeXVweDdIMTlwTkhJWjZEa2U2ZTFrTzRPS3c2UytVZkFnKzA2UEFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUwODYyODE3CWZpbGU6QXVrYWF0XzAuMS4yX3g2NF9lbi1VUy5tc2kKaVU2akQyMnZSRWVFVWZDaGprS3JwajNNbmZMaTNoTHgrck1PNDRHcXZtTmtYQjFRQUUzSTE5anJReWR3R3g4UFJYZDRJV0hSL09UdzVkM0FDUks3REE9PQo=",
-      "url": "https://github.com/aukaatMMA/aukaat-download/releases/download/v0.1.2/Aukaat_0.1.2_x64_en-US.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUazdaaXNHNXBXdFR5dXVsR1B6YzJVSjlRMHJoUmRwTkJ0ODBPcUkzQUhTVWRyeHdSL2JxM2FRSXhxTmw0d1NkNmhINVNJWmNQdkR0Y1g0SmtOd25BYldhb1htc3duNEFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUwODc5MDQ1CWZpbGU6QXVrYWF0XzAuMS4zX3g2NF9lbi1VUy5tc2kKUVZSTld0NnRxS1o1TmcrK2tOUTY5NkU5MFkvNFplQXZ5dGtXazlpZHFTUndQcXJZMlZrQ2VLNkJhRmd5aG95eFBSNmw5WVYwTGtraVRYLzJWQit4Qnc9PQo=",
+      "url": "https://github.com/aukaatMMA/aukaat-download/releases/download/v0.1.3/Aukaat_0.1.3_x64_en-US.msi"
     }
   }
 }
