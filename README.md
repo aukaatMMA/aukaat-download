@@ -8,9 +8,7 @@ Originally developed solo by **[gabruuuuu](https://github.com/gabru-md)**, Aukaa
 
 ## 👥 The Team
 
-- **[gabruuuuu](https://github.com/gabru-md)** –  Started the original concept and solo MVP. Now leads direction, app design, and works closely with the team on all key decisions. 
-- **[Itachiii](http://github.com/AshirMalik)** – Brings structure to the madness: operations, planning, and coordination.
-- **[klystron98](https://github.com/pantmanik)** – Owns backend infra and helps scale the app using AWS Lambda and cloud tools.
+- **[gabruuuuu](https://github.com/gabru-md)** –  Started the original concept and solo MVP.
 
 ---
 
