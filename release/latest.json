@@ -1,11 +1,11 @@
 {
-  "version": "0.1.6",
-  "notes": "Release v0.1.6: Major fixes to help app run smoother",
-  "pub_date": "2025-06-27T22:34:00Z",
+  "version": "0.1.7",
+  "notes": "Release v0.1.7: Major fixes to help app run smoother",
+  "pub_date": "2025-06-27T23:34:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUazdaaXNHNXBXdFNXL1VSNDRiUkxQMkxJcXN6bVplM1FwTUp1bkpGekFZZ29ZdE5pdGxGOTdnVUFiUW13ZFJCQllIamZEYVlnMjQ5Ly9xWklubXVteFJ1QnFYYUg4Y2dvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUxMDU0MzU5CWZpbGU6QXVrYWF0XzAuMS42X3g2NF9lbi1VUy5tc2kKM2gwTnNzNkIrWUVIV0NrSVVrclAyeWJBNkZHRUpTY3UvVVVMVXFncWNRWFFoSDlrY0s3d1FJVzFBVXZkcHp1K2NSS2NpQUhPNW14VVc5dTZ1VzBpQWc9PQo=",
-      "url": "https://github.com/aukaatMMA/aukaat-download/releases/download/v0.1.6/Aukaat_0.1.6_x64_en-US.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUazdaaXNHNXBXdFJjQ2ZTR3prSXhnN2lqcXhSN0VYcVNUaG8wMys3dFdOWTkvajhUWmdpVEd1d3l1SytxRzdHL0k2RzdVSFhKVXUrc3ZVTENOYk1zcThSVUU3RUdZVndrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUxMDU4MzQ0CWZpbGU6QXVrYWF0XzAuMS42X3g2NF9lbi1VUy5tc2kKNHhqRElBNUxxZzF5UFFsZHRZczdFeGVZYnRjbGl5Y013RnN0ay9yWGR1QUlBVWVGcGtsOVFBNzFqVWlyRDhBcS8xVjlrS1poM1dKOHpOVTFBM0o1Qnc9PQo=",
+      "url": "https://github.com/aukaatMMA/aukaat-download/releases/download/v0.1.7/Aukaat_0.1.7_x64_en-US.msi"
     }
   }
 }
