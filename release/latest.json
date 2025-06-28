@@ -1,11 +1,11 @@
 {
-  "version": "0.1.8",
-  "notes": "Release v0.1.8: Major fixes to help app run smoother",
-  "pub_date": "2025-06-28T11:52:00Z",
+  "version": "0.1.9",
+  "notes": "Release v0.1.9: Fixes Discord Integration for Secondary Player",
+  "pub_date": "2025-06-28T14:35:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUazdaaXNHNXBXdGNIQ002dEJIa2F1RjhUZWNBbENMM2puMnRaK00yU2ZzbGlBSk15SktiVHBWY2t1VU5jZzhEWjZaQ3RrQ0VEaGtDbzdGL2VSOUJSRjBNYnBWRWNqekFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUxMDcwNzcxCWZpbGU6QXVrYWF0XzAuMS44X3g2NF9lbi1VUy5tc2kKSFh2U1QyMmJkTkZXVmFHYlpKc21qMmlPMXBOTEQ1M3lOd2x4eWZyc21KU29zL0tkMmRFQ01kNmZFTjVJcXlaZnNIRjdWZ0QyZVR3SXhKRlk0Z04xRFE9PQo=",
-      "url": "https://github.com/aukaatMMA/aukaat-download/releases/download/v0.1.8/Aukaat_0.1.8_x64_en-US.msi"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUazdaaXNHNXBXdGZZMUlONFNxcXFDZ1JQbW1Db3N2QUppQWR5dEQvN1k5c1J3NDA0UWREaExWV3BXNlZkVFNwSmdWcmJCQ21JTVVxQ0k2S3o4SE9qc29vOTl3UXRXMkFBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzUxMTA4NDM5CWZpbGU6QXVrYWF0XzAuMS45X3g2NF9lbi1VUy5tc2kKNldwYzNZNDg1UzVMWU1Gc21ERVR1dmMxeFA0TVRuNk9YaXFNUlQyemxWdW0wZjJxYjQrZXBIMmdtZzZ3ajZkbnp2bVA4eVpSWXhMM3kveFlBWTZMRFE9PQo=",
+      "url": "https://github.com/aukaatMMA/aukaat-download/releases/download/v0.1.9/Aukaat_0.1.9_x64_en-US.msi"
     }
   }
 }
